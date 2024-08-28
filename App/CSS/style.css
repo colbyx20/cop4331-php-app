@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+    transition: 0.5s;
+}
+
+.container{
+    position: absolute;
+    width: 800px;
+    height: 500px;
+    margin: 20px;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.inner{
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    box-shadow: 0 5px 45px rgba(248, 245, 245, 0.432);
+    color: #fff;
+}
+
+.inner .traversal{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inner .traversal h2{
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.inner .traversal button{
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #FFF;
+    -webkit-box-reflect: below 0px linear-gradient(transparent, #0002);
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.inner .traversal button:hover {
+    color: #000;
+}
+
+.inner .traversal button:nth-child(2){
+    filter: hue-rotate(80deg);
+}
+
+.inner .traversal button::before{
+    content:'';
+    position: absolute;
+    left: -11px;
+    top: 50%;
+    transform: translate(-50%);
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    box-shadow: 5px -8px 0 #fff,
+                5px 8px 0 #fff;
+}
+
+.inner .traversal button::after{
+    content: '';
+    position: absolute;
+    right: -31px;
+    top: 50%;
+    transform: translate(-50%);
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    box-shadow: -5px -8px 0 #fff,
+                -5px 8px 0 #fff;
+}
+
+.formBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 45px rgba(0,0,0,0.25);
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.formBox.active{
+    left: 50%;
+}
+
+.formBox .sign{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 50px;
+    transition: 0.5s;
+}
+
+.formBx .inForm {
+    transition-delay: 0.25s;
+}
+
+.formBox.active .inForm {
+    left: -100%;
+    transition-delay: 0s;
+}
+
+.formBox .upForm {
+    left: 100%;
+}
+
+.formBox.active .upForm {
+    left: 0;
+}
+
+.formBox .sign .form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.formBox .sign .form h2{
+    font-family: 'Satisfy', cursive;
+    font-size: 2.2em;
+    margin-bottom: 5px;
+}
+
+.formBox .sign .form h3{
+    font-size: 1.4em;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.formBox .sign .form input{
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+    border: 1px solid #333;
+}
+
+.formBox .sign .form button{
+    background: #000;
+    border: none;
+    color: #fff;
+    max-width: 100%;
+    height: 35px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+.formBox .sign .form button:hover{
+    opacity: .75;
+}

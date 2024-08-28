@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- Language type -->
+<html lang = "en">
+<head>
+
+	<!-- Meta types -->
+	<meta charset = "UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content= "Andy Garcia">
+
+	<title>Contact Atlas</title>
+
+	<!-- Style sheet-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/code.js"></script>
+
+</head>
+<body>
+	<!-- Container holds all layers-->
+	<div class="container">
+		
+		<!-- Box layer that holds form boxes-->
+		<div class="inner Layer">
+
+			<!-- Form options: Login or Create account-->
+			
+			<div class="traversal sign-in">
+				<h2>User Login Portal</h2>
+				<button class="signin-btn">Sign in</button>
+			</div>
+
+
+			<div class="traversal create-account">
+				<h2>Don't Have an Account?</h2>
+				<button class="signup-btn">Sign up</button>
+			</div>
+
+		</div>
+
+		<!-- Forms -->
+		<div class="formBox">
+			<div class="sign inForm">
+				<div class="form in" name="signin-form">
+					<h2>Contact Atlas</h2>
+					<h3>Sign in</h3>
+					<input type="text" id="loginName" placeholder="Username" required = "required"><label for="Username"></label>
+					<input type="password" id="loginPassword" placeholder="Password" required = "required">
+					<button type="button" id="loginButton" class="buttons" onclick="doLogin();">Log in</button>
+					<span id="loginResult"></span>
+				</div>
+			</div>
+
+			<div class="sign upForm">
+				<div class="form up" name="signup-form">
+					<h3>Sign up</h3>
+					<input type="text" id="userName" placeholder="Username" required = "required">
+					<input type="text" id="firstName" placeholder="First Name" required = "required">
+					<input type="text" id="lastName" placeholder="Last Name" required = "required">
+					<input type="password" id="password" placeholder="Password" required = "required">
+					<button type="button" id="signupButton" class="buttons" onclick="doSignUp();">Create Account</button>
+					<span id="SignUpResult"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Background script-->
+	<canvas class="background"></canvas>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+	<script>
+		const signinBtn = document.querySelector('.signin-btn');
+		const signupBtn = document.querySelector('.signup-btn');
+		const formBox = document.querySelector('.formBox');
+		const body = document.querySelector('body');
+
+		signupBtn.onclick = function()
+		{
+			formBox.classList.add('active')
+			body.classList.add('active')
+		}
+
+		signinBtn.onclick = function()
+		{
+			formBox.classList.remove('active')
+			body.classList.remove('active')
+		}
+
+		var particles = Particles.init({
+			selector: '.background',
+			color: ['#FFFFFF', '#c4c3d0'],
+			connectParticles: true,
+			responsive: [{
+				breakpoint: 500,
+				options: {
+					color: '#00C9B1',
+					maxParticles: 150,
+					connectParticles: false
+				}
+			}]
+		});
+	</script>
+	
+</body> 
+</html>

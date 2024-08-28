@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    background: #000000;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+nav{
+    height: 80px;
+    width: 100%;
+    background: #000;
+    border-bottom: 1px solid white;
+}
+
+label.title{
+    font-size: 40px;
+    font-weight: bold;
+    padding: 0px 75px;
+    line-height: 80px;
+    color: white;
+    font-family: 'Satisfy', cursive;
+}
+
+nav ul{
+    float: right;
+    margin-right: 25px;
+}
+
+nav li{
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 80px;
+}
+
+nav a{
+    color: black;
+    font-size: 18px;
+    border: 1px solid transparent;
+    padding: 7px 10px;
+    border-radius: 3px;
+    background: #fff;
+}
+
+nav a.active{
+    background: white;
+    border: 1px solid black;
+}
+
+a:hover{
+    background: #bbbaba;
+    box-shadow: 0 5px 55px rgba(248, 248, 248, 0.61);
+    text-decoration: underline;
+}
+
+.body{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    /* background-color: #fff; */
+}
+
+.body .searching{
+    position: relative;
+    margin: auto;
+    top: 50px;
+    width: 50%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    box-shadow: 0 5px 45px rgba(248, 245, 245, 0.432);
+    border-radius: 100px;
+    color: #fff;
+}
+
+input{
+    position: relative;
+    display: inline-block;
+    font-size: 35px;
+    box-sizing: border-box;
+    transition: .2s;
+}
+
+input[type="text"]{
+    width: 550px;
+    height: 55px;
+    border: none;
+    outline: none;
+    padding: 0 25px;
+    border-radius: 25px 0 0 25px;
+}
+
+input[type="submit"]{
+    position: relative;
+    left: -5px;
+    width: 200px;
+    height: 55px;
+    border-radius: 0 25px 25px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #01BAEF;
+}
+
+input[type="submit"]:hover{
+    text-decoration: underline;
+    background: #62CCE9;
+}
